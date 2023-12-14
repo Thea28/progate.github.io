@@ -1,0 +1,805 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: rgb(7, 7, 72);
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0; /* Position the header at the top of the viewport */
+  left: 0; /* Align the header to the left edge of the viewport */
+  z-index: 1000; /* Ensure the header stays on top of other elements */
+}
+
+
+/* Styling for the logo image in the navigation */
+nav .logo img {
+  margin-top: -10px; /* Adjusting the top margin */
+  width: 150px;
+  height: 100px;
+}
+
+/* Styling for the unordered list in the navigation */
+nav ul {
+  float: right; 
+  margin-right: 20px; 
+}
+
+/* Styling for each list item in the navigation */
+nav ul li {
+  display: inline-block; 
+  line-height: 80px; /* Setting line height */
+  margin: 0 5px; 
+}
+
+/* Styling for anchor tags within list items */
+nav ul li a {
+  color: rgb(245, 142, 6); 
+  font-size: 17px; 
+  padding: 7px 13px; /* Padding around the text */
+  border-radius: 3px; /* Adding rounded corners */
+  text-transform: uppercase; 
+}
+
+/* Styling for the mobile menu button */
+.checkbtn {
+  font-size: 30px; 
+  color: white; 
+  float: right; 
+  line-height: 80px; /* Setting line height */
+  margin-right: 40px;
+  cursor: pointer; /* Changing cursor to pointer */
+  display: none; 
+}
+
+/* Styling for checkbox element (for mobile menu) - initially hidden */
+#check {
+  display: none;
+}
+
+/* Media query for smaller screens (max-width: 952px) */
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px; /* Adjusting logo font size */
+    padding-left: 50px; /* Adding padding to the left */
+  }
+  nav ul li a {
+    font-size: 16px; /* Adjusting font size for smaller screens */
+  }
+}
+
+/* Media query for even smaller screens (max-width: 858px) */
+@media (max-width: 858px) {
+  /* Displaying the mobile menu button */
+  .checkbtn {
+    display: block; /* Showing the button */
+  }
+  ul {
+    position: fixed; /* Fixing the position */
+    width: 100%; 
+    height: 100vh; 
+    background-color: rgb(7, 7, 72); 
+    top: 80px; /* Distance from the top */
+    left: -100%; /* Initially off the screen */
+    text-align: center; /* Centering text */
+    transition: all .5s; 
+  }
+  nav ul li {
+    display: block; /* Displaying items as blocks */
+    margin: 50px 0; /* Margin for each item */
+    line-height: 30px; 
+  }
+  nav ul li a {
+    font-size: 20px; /* Adjusting font size */
+  }
+
+  /* Applying changes when the checkbox is checked */
+  #check:checked ~ ul {
+    left: 0; /* Displaying the menu */
+  }
+}
+
+
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(image/Pizza20.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.home .context{
+    max-width: 50em;
+    margin-left: 30px;
+
+}
+.home .context h2{
+    font-size: 60px;
+    color: rgb(245, 142, 6);
+    font-family: 'Lucida Sans';
+}
+.home .context p{
+    font-size: 25px;
+    font-weight: lighter;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    /* home About us*/
+
+}
+
+
+.about h1{
+  text-align: center;
+  font-size: 80px;
+  color: #09005e;
+  margin-top: 30px;
+}
+.about .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -80px;
+  margin-left: -60px;
+}
+
+.about .row image{
+  flex: 1 1 45px;
+  margin-left: 20px;
+  
+}
+
+.about .row image img{
+  flex-shrink: 1 ; /*means the item can shrink if the container size is reduced.*/
+  width: 100%;
+  margin-left: -50px;
+}
+
+.about .row .about_text{
+  flex: 1 1 45px; /*sets the item to be flexible in terms of growth and shrinkage*/
+  padding: 2rem;
+}
+
+
+.about .row .about_text p{
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 50px;
+  text-align: justify;
+}
+
+
+
+/*ABOUT US*/
+
+/* Styling for the main container of the 'about us' section */
+.about_us {
+  width: 100%; 
+  padding: 50px 0; /* Padding on top and bottom */
+}
+
+/* Styling for the heading within the 'about us' section */
+.about_us h1 {
+  font-size: 80px; 
+  display: flex; 
+  align-items: center; /* Centering vertically */
+  justify-content: center; /* Centering horizontally */
+  margin-top: 30px; 
+  margin-bottom: 30px; 
+  color: #09005e; 
+  font-family: 'Courier New', Courier, monospace; 
+}
+
+/* Styling for paragraphs within the 'about us' section */
+.about_us p {
+  font-size: 20px; 
+  text-align: center; 
+  text-align: justify; 
+  margin-left: 200px;
+  margin-right: 200px; 
+}
+
+/* Styling for the container of the 'about us' boxes */
+.about_us .about_box {
+  margin-top: 30px; /* Margin from the top */
+  display: flex; 
+  flex-wrap: wrap; /* Allowing wrapping of items */
+  justify-content: center; /* Centering items horizontally */
+}
+
+/* Styling for each 'about us' box */
+.about_us .about_box .about_card {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3); /* Adding box shadow */
+  width: 700px; 
+  height: 560px; 
+  background-color: #251c76; 
+  padding-top: 7px; /* Padding from the top */
+}
+
+/* Styling for the image container within each 'about us' box */
+.about_us .about_box .about_card .about_image {
+  width: 690px; 
+  height: 550px; 
+  margin: 0 auto; 
+  overflow: hidden; /* Hiding overflow */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3); /* Adding box shadow */
+}
+
+/* Styling for images within the 'about us' boxes */
+.about_us .about_box .about_card .about_image img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; /* Covering the container */
+  object-position: center; /* Centering the image */
+}
+
+/*Home PRODUCT*/
+
+/* Styling for the main container of the 'product' section */
+.product {
+  width: 100%; /* Full width */
+  padding: 50px 0; /* Padding on top and bottom */
+  margin-top: -80px; /* Negative margin to adjust positioning */
+}
+
+/* Styling for the heading within the 'product' section */
+.product h1 {
+  font-size: 80px; 
+  display: flex; /* Using flexbox */
+  align-items: center; 
+  justify-content: center; /* Centering horizontally */
+  margin-bottom: 30px; /* Margin from the bottom */
+  color: #09005e; 
+}
+
+/* Styling for the container of the 'product' cards */
+.product .product_box {
+  display: flex; /* Using flexbox */
+  flex-wrap: wrap; /* Allowing wrapping of items */
+  justify-content: center; /* Centering items horizontally */
+}
+
+/* Styling for each 'product' card */
+.product .product_box .product_card {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3); /* Adding box shadow */
+  width: 430px; 
+  height: 560px; 
+  padding-top: 15px; /* Padding from the top */
+  margin: 10px; /* Margin around the card */
+}
+
+/* Styling for the image container within each 'product' card */
+.product .product_box .product_card .product_image {
+  width: 400px; 
+  height: 450px; 
+  margin: 0 auto; /* Centering horizontally */
+  overflow: hidden; /* Hiding overflow */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3); /* Adding box shadow */
+  cursor: pointer; 
+}
+
+/* Styling for images within the 'product' cards */
+.product .product_box .product_card .product_image img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; /* Covering the container */
+  object-position: center; /* Centering the image */
+  transition: 0.4s; 
+}
+
+/* Styling for the hover effect on images within 'product' cards */
+.product .product_box .product_card .product_image:hover img {
+  transform: scale(1.1); /* Scaling the image on hover */
+}
+
+/* Styling for the title within the 'product' cards */
+.product .product_box .product_card .product_info h2 {
+  width: 60%; /* Setting width */
+  text-align: center; 
+  margin: 10px auto; /* Margin around the title */
+  font-size: 40px; 
+  color: rgb(172, 102, 12); 
+}
+
+
+
+
+
+/*Product_Menu*/
+
+/* Styling for the dropdown menu container */
+.navbar_drop {
+  display: flex; /* Displaying as a flex container */
+  flex-direction: column; /* Vertical layout */
+  border-radius: 5px; 
+  padding-top: 70px; /* Padding from the top */
+  position: absolute; 
+  top: -25px; /* Positioning slightly above the parent */
+  z-index: 1; /* Z-index for stacking order */
+  text-align: center; 
+  margin-left: -25px; 
+}
+
+/* Styling for anchor links on hover within the dropdown */
+.dropdown li a:hover {
+  color: rgb(9, 114, 206); 
+}
+
+/* Styling for the dropdown container */
+.dropdown {
+  position: relative; 
+  text-align: center; 
+}
+
+/* Styling for the span elements within the dropdown */
+.dropdown span {
+  margin-left: 5px; 
+  margin-right: 5px; 
+  z-index: 2; /* Z-index for stacking order */
+  position: relative; /* Setting relative positioning */
+  cursor: pointer; /* Changing cursor to pointer */
+  color: rgb(245, 142, 6); 
+  font-size: 18px; 
+}
+
+/* Styling for the dropdown when hovered */
+.dropdown:hover .navbar_drop {
+  display: flex; /* Displaying the dropdown when hovered */
+  flex-direction: column; /* Vertical layout */
+  background-color: rgb(7, 7, 72); 
+}
+
+/* Initially hiding the dropdown */
+.navbar_drop {
+  display: none;
+}
+
+/* Styling for list items within the dropdown */
+.navbar_drop li {
+  list-style: none; /* Removing bullet points */
+  border-bottom: 1px solid #FFF; 
+}
+
+/* Styling for anchor links within the dropdown */
+.navbar_drop li a {
+  text-decoration: none; /* Removing underlines */
+  color: rgb(245, 142, 6); 
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* Removing bottom border from the last list item */
+.navbar_drop li:last-of-type {
+  border-bottom: none; /* Removing bottom border */
+}
+
+  /*Menu*/
+
+
+/* Styling for the main menu container */
+.menu {
+  padding-bottom: 5px; 
+  padding-top: 80px; 
+}
+
+/* Styling for the main title */
+#title {
+  text-align: center; 
+  font-size: 70px; 
+  color: rgb(5, 5, 101);
+  margin-bottom: 2px; /* Margin from the bottom */
+  font-family: 'Courier New', Courier, monospace; 
+}
+
+/* Styling for the secondary menu title */
+.menu h1 {
+  font-size: 55px; 
+  display: flex; /* Using flexbox */
+  align-items: left; /* Aligning to the left */
+  margin-bottom: 10px; /* Margin from the bottom */
+  color: rgb(0, 0, 66);
+  margin-left: 30px; /* Margin from the left */
+}
+
+/* Styling for a span within the secondary menu title */
+.menu h1 span {
+  color: rgb(255, 196, 0);
+  margin-left: 15px; /* Margin from the left */
+}
+
+/* Styling for the menu boxes */
+.menu .menu_box {
+  display: flex; /* Using flexbox */
+  flex-wrap: wrap; /* Allowing wrapping of items */
+  padding: 25px; /* Padding around the boxes */
+}
+
+/* Styling for each menu card */
+.menu .menu_box .menu_card {
+  width: 350px;
+  height: 480px; 
+  padding-top: 10px; /* Padding from the top */
+  margin: 5px; /* Margin around the cards */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adding box shadow */
+}
+
+/* Styling for the image container within each menu card */
+.menu .menu_box .menu_card .menu_image {
+  width: 330px; 
+  height: 300px; 
+  margin: 0 auto; /* Centering horizontally */
+  overflow: hidden; /* Hiding overflow */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adding box shadow */
+  cursor: pointer; /* Changing cursor to pointer */
+}
+
+/* Styling for images within the menu cards */
+.menu .menu_box .menu_card .menu_image img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; /* Covering the container */
+  transition: 0.4s; /* Adding transition effect */
+}
+
+/* Styling for the hover effect on images within menu cards */
+.menu .menu_box .menu_card .menu_image:hover img {
+  transform: scale(1.1); /* Scaling the image on hover */
+}
+
+/* Styling for the information within menu cards */
+.menu .menu_box .menu_card .menu_info h2 {
+  margin-top: 7px; /* Margin from the top */
+  text-align: center; 
+  font-size: 25px; 
+  color: rgb(245, 142, 6); 
+}
+
+/* Styling for paragraphs within menu cards */
+.menu .menu_box .menu_card .menu_info p {
+  text-align: center;
+  margin-top: 8px; /* Margin from the top */
+  text-align: justify; 
+  padding-left: 20px; /* Padding from the left */
+  padding-right: 20px; /* Padding from the right */
+}
+
+/* Styling for secondary headings within menu cards */
+.menu .menu_box .menu_card .menu_info h3 {
+  text-align: center; 
+  margin-top: 10px; /* Margin from the top */
+}
+
+/* Styling for icons within menu cards */
+.menu .menu_box .menu_card .menu_info .menu_icon {
+  color: #fac031; /* Icon color */
+  text-align: center; 
+  margin: 10px 0; /* Margin around the icon */
+}
+
+/* Styling for buttons within menu cards */
+.menu .menu_box .menu_card .menu_info .menu_btn {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; /* Centering content */
+  text-decoration: none; /* Removing underlines */
+  color: white; 
+  background: #09005e; 
+  margin-top: 10px; 
+  height: 40px; 
+  margin-left: 90px; 
+  margin-right: 90px;
+  transition: 0.3s; /* Adding transition effect */
+}
+
+
+
+/*login*/
+.login{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    margin-top: 200px;
+    margin-left: 550px;
+  
+}
+
+.login .form_box{
+    width: 100%;
+    padding: 40px;
+    
+}
+
+.form_box h2{
+    font-size: 35px;
+    color: rgb(245, 142, 6);
+    text-align: center;
+}
+
+.input_box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+
+.input_box label{
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: rgb(7, 7, 72);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    color: aliceblue;
+}
+.login_register{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login_register p a{
+    color: black;
+}
+
+.input_box input{
+
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input_box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: black;
+    line-height: 57px;
+}
+
+
+
+#button{
+    margin-top: 1px;
+}
+
+.navbar .btnLogin{
+    width: 100px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid white;
+    color: rgb(245, 142, 6);
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.navbar .btnLogin:hover{
+    background-color: rgba(245, 140, 3, 0.712);
+    color: rgb(2, 29, 53);
+}
+
+/*Contact Us*/
+
+.container{
+  width: 85%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .content .left-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+
+.content .left-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+
+.content .left-side .details{
+  margin: 14px;
+  text-align: center;
+}
+
+.content .left-side .details i{
+  font-size: 30px;
+  color: #3e2093;
+  margin-bottom: 10px;
+}
+.content .left-side .details .topic{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.content .left-side .details .text-one,
+.content .left-side .details .text-two{
+  font-size: 14px;
+  color: #afafb6;
+}
+
+.container .content .right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.content .right-side .topic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: #3e2093;
+}
+.right-side .input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.right-side .input-box input,
+.right-side .input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.ri
+ght-side .message-box{
+  min-height: 110px;
+}
+
+.right-side .input-box textarea{
+  padding-top: 6px;
+}
+.right-side .button{
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.right-side .button input[type="button"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #3e2093;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button input[type="button"]:hover{
+  background: #5029bc;
+}
+
+@media (max-width: 950px) {
+  .container{
+    width: 90%;
+    padding: 30px 40px 40px 35px ;
+  }
+  .container .content .right-side{
+   width: 75%;
+   margin-left: 55px;
+}
+}
+@media (max-width: 820px) {
+  .container{
+    margin: 40px 0;
+    height: 100%;
+  }
+  .container .content{
+    flex-direction: column-reverse;
+  }
+ .container .content .left-side{
+   width: 100%;
+   flex-direction: row;
+   margin-top: 40px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .container .content .left-side::before{
+   display: none;
+ }
+ .container .content .right-side{
+   width: 100%;
+   margin-left: 0;
+ }
+}
+
+
+/*FOOTER*/
+
+   footer {
+    background-color: rgb(7, 7, 72);
+    padding: 20px 0;
+    color: #fff;
+  }
+
+  .footer-content .footer-section h3 {
+    color: rgb(245, 142, 6);
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .footer-section form input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+  }
+  
+  .footer-section form button {
+    background-color: rgb(255, 195, 140);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
